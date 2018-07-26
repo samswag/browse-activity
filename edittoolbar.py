@@ -30,6 +30,7 @@ from browser import Browser
 
 
 class EditToolbar(BaseEditToolbar):
+
     def __init__(self, act):
         BaseEditToolbar.__init__(self)
 

@@ -19,7 +19,9 @@
 import logging
 import os
 import tempfile
-import urllib.request, urllib.error, urllib.parse
+import urllib.request
+import urllib.error
+import urllib.parse
 
 from gettext import gettext as _
 
@@ -35,6 +37,7 @@ from sugar3 import profile
 
 
 class ContentInvoker(Invoker):
+
     def __init__(self, browser):
         Invoker.__init__(self)
         self._position_hint = self.AT_CURSOR
@@ -108,6 +111,7 @@ class ContentInvoker(Invoker):
 
 
 class BrowsePalette(Palette):
+
     def __init__(self, browser, hit):
         Palette.__init__(self)
         self._browser = browser

@@ -21,6 +21,7 @@ from hashlib import sha1
 
 
 class Model(GObject.GObject):
+
     ''' The model of web-activity which uses json to serialize its data
     to a file and deserealize from it.
     '''

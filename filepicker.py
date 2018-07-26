@@ -39,6 +39,7 @@ def cleanup_temp_files():
 
 
 class FilePicker(ObjectChooser):
+
     def __init__(self, parent):
         ObjectChooser.__init__(self, parent)
 

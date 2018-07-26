@@ -28,6 +28,7 @@ from browser import ZOOM_ORIGINAL
 
 
 class ViewToolbar(Gtk.Toolbar):
+
     def __init__(self, activity):
         GObject.GObject.__init__(self)
 

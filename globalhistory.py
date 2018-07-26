@@ -22,6 +22,7 @@ _global_history = None
 
 
 class GlobalHistory(object):
+
     def __init__(self):
         self._store = places.get_store()
 

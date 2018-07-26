@@ -24,6 +24,7 @@ _store = None
 
 
 class Place(object):
+
     def __init__(self, uri=''):
         self.uri = uri
         self.title = ''

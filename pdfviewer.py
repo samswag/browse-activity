@@ -37,6 +37,7 @@ import downloadmanager
 
 
 class EvinceViewer(Gtk.VBox):
+
     """PDF viewer with a toolbar overlay for basic navigation and an
     option to save to Journal.
 
@@ -195,6 +196,7 @@ class EvinceViewer(Gtk.VBox):
 
 
 class DummyBrowser(GObject.GObject):
+
     """Has the same interface as browser.Browser ."""
     __gsignals__ = {
         'new-tab': (GObject.SignalFlags.RUN_FIRST, None, ([str])),
@@ -300,6 +302,7 @@ class DummyBrowser(GObject.GObject):
 
 
 class PDFProgressMessageBox(Gtk.EventBox):
+
     def __init__(self, message, button_callback):
         Gtk.EventBox.__init__(self)
 
@@ -344,6 +347,7 @@ class PDFProgressMessageBox(Gtk.EventBox):
 
 
 class PDFErrorMessageBox(Gtk.EventBox):
+
     def __init__(self, title, message, button_callback):
         Gtk.EventBox.__init__(self)
 
@@ -399,12 +403,14 @@ class PDFErrorMessageBox(Gtk.EventBox):
 
 
 class PDFTabPage(Gtk.HBox):
+
     """Shows a basic PDF viewer, download the file first if the PDF is
     in a remote location.
 
     When the file is remote, display a message while downloading.
 
     """
+
     def __init__(self, state=None):
         GObject.GObject.__init__(self)
         self._browser = DummyBrowser(self)

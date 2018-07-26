@@ -104,6 +104,7 @@ ACTIVITY_FT_MIME = 'x-sugar/from-activity'
 
 
 class CollabWrapper(GObject.GObject):
+
     '''
     The wrapper provides a high level abstraction over the
     collaboration system.  The wrapper deals with setting up the
@@ -408,6 +409,7 @@ FT_REASON_REMOTE_ERROR = 6
 
 
 class _BaseFileTransfer(GObject.GObject):
+
     '''
     The base file transfer should not be used directly.  It is used as a
     base class for the incoming and outgoing file transfers.
@@ -425,7 +427,6 @@ class _BaseFileTransfer(GObject.GObject):
         state (FT_STATE_*), current state of the transfer
         transferred_bytes (int), number of bytes transfered so far
     '''
-
 
     def __init__(self):
         GObject.GObject.__init__(self)
@@ -504,6 +505,7 @@ class _BaseFileTransfer(GObject.GObject):
 
 
 class IncomingFileTransfer(_BaseFileTransfer):
+
     '''
     An incoming file transfer from another buddy.  You need to first accept
     the transfer (either to memory or to a file).  Then you need to listen
@@ -595,6 +597,7 @@ class IncomingFileTransfer(_BaseFileTransfer):
 
 
 class _BaseOutgoingTransfer(_BaseFileTransfer):
+
     '''
     This class provides the base of an outgoing file transfer.
 
@@ -663,6 +666,7 @@ class _BaseOutgoingTransfer(_BaseFileTransfer):
 
 
 class OutgoingFileTransfer(_BaseOutgoingTransfer):
+
     '''
     An outgoing file transfer to send from a file (on the computer's file
     system).
@@ -687,6 +691,7 @@ class OutgoingFileTransfer(_BaseOutgoingTransfer):
 
 
 class OutgoingBlobTransfer(_BaseOutgoingTransfer):
+
     '''
     An outgoing file transfer to send from a string in memory.
 
@@ -706,6 +711,7 @@ class OutgoingBlobTransfer(_BaseOutgoingTransfer):
 
 
 class _TextChannelWrapper(object):
+
     '''Wrapper for a telepathy Text Channel'''
 
     def __init__(self, text_chan, conn):

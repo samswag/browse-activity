@@ -50,6 +50,7 @@ _SEARCH_ENTRY_MARGIN = style.zoom(14)
 
 
 class _SearchWindow(Gtk.Window):
+
     """A search window that can be styled in the theme."""
 
     __gtype_name__ = "BrowseSearchWindow"
@@ -496,7 +497,7 @@ class PrimaryToolbar(ToolbarBase):
         self._download_icon.update(progress)
         if downloadmanager.num_downloads() > 0:
             self._download_icon.props.tooltip = \
-                _('{}% Downloaded').format(int(progress*100))
+                _('{}% Downloaded').format(int(progress * 100))
             return True
         else:
             self._download_running_hid = None

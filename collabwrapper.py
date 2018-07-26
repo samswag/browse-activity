@@ -79,12 +79,10 @@ from telepathy.interfaces import \
     CHANNEL_TYPE_TEXT, \
     CHANNEL_TYPE_FILE_TRANSFER, \
     CONN_INTERFACE_ALIASING, \
-    CONNECTION_INTERFACE_REQUESTS, \
     CHANNEL, \
     CLIENT
 from telepathy.constants import \
     CHANNEL_GROUP_FLAG_CHANNEL_SPECIFIC_HANDLES, \
-    CONNECTION_HANDLE_TYPE_CONTACT, \
     CHANNEL_TEXT_MESSAGE_TYPE_NORMAL, \
     CONNECTION_HANDLE_TYPE_CONTACT, \
     SOCKET_ADDRESS_TYPE_UNIX, \
@@ -93,7 +91,7 @@ from telepathy.client import Connection, Channel
 
 from sugar3.presence import presenceservice
 from sugar3.activity.activity import SCOPE_PRIVATE
-from sugar3.graphics.alert import NotifyAlert, Alert
+from sugar3.graphics.alert import NotifyAlert
 
 import logging
 _logger = logging.getLogger('text-channel-wrapper')
@@ -687,7 +685,7 @@ class OutgoingFileTransfer(_BaseOutgoingTransfer):
         self._create_channel(file_size)
 
     def _get_input_stream(self):
-        input_stream = Gio.File.new_for_path(self._path).read(None)
+        return Gio.File.new_for_path(self._path).read(None)
 
 
 class OutgoingBlobTransfer(_BaseOutgoingTransfer):
